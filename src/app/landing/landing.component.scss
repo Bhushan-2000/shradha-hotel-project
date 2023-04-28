@@ -1,0 +1,41 @@
+.btn {
+    margin-left: 15px;
+    margin-top: 25px;
+}
+
+.main {
+    height: 200%;
+}
+
+.background-image {
+    background-image: url('/assets/images/img3.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    height: 870px;
+    width: 100%;
+    margin-top: -20px;
+}
+
+.hotelAnimation {
+    color: rgb(198, 224, 229);
+    font-size: 90px;
+    position: relative;
+    margin-top: 250px;
+    text-shadow: 6px 6px red;
+    animation-name: mymove;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes mymove {
+    from {
+        left: 100%;
+
+    }
+
+    to {
+        left: -90%;
+    }
+}

@@ -1,0 +1,93 @@
+input[type="submit"] {
+    background-color: #43c42a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-left: 180px;
+}
+
+input[type="submit"]:hover {
+    background-color: #e6314c;
+}
+
+
+.user-image {
+    height: 150px;
+    width: 150px;
+    padding-top: 5px;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+    height: 120%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sign-up {
+    color: #fff;
+}
+
+.sign-up a {
+    color: #d39e00;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-card {
+    background: #c31432;
+    background: -webkit-linear-gradient(to right, #4fdce6, #1f7bbc);
+    background: linear-gradient(to right, #3dbac8, #2462a9);
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px #f7f7f7;
+
+}
+
+.user-image {
+    height: 70px;
+    width: 70px
+}
+
+label {
+    color: #fff;
+    font-weight: 700;
+}
+
+.auth-avatar {
+    text-align: center;
+    margin-top: -50px;
+}
+
+.auth {
+    margin-top: 35px;
+    border: none;
+    border-radius: 6px;
+}
+
+.text-right.forget-pass a {
+    font-size: 12px;
+    color: #d39e00;
+    text-decoration: none;
+}
+
+.btn-my {
+    background-color: #1f15aa;
+    border-color: #25231d;
+    color: #fff;
+}
+
+.simple-keyboard {
+    max-width: 850px;
+}
+
+mat-form-field {
+    padding: 8px;
+    width: 95%;
+}
+
+.errorMsg {
+    color: #c31432;
+    font-size: 14px;
+}

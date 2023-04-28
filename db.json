@@ -1,0 +1,232 @@
+{
+  "admin": [
+    {
+      "name": "bhushan",
+      "mobileNo": "1122334455",
+      "email": "abc123@gmail.com",
+      "pancard": "ABCDE1234A",
+      "gender": "male",
+      "city": "Mumbai",
+      "password": "bhushan123",
+      "confirmPassword": "bhushan123",
+      "acceptTerms": true,
+      "id": 1
+    },
+    {
+      "name": "priya",
+      "mobileNo": "1234567890",
+      "email": "priya123@gmail.com",
+      "pancard": "PRIYA1111A",
+      "gender": "female",
+      "city": "Pune",
+      "password": "priya987",
+      "confirmPassword": "priya987",
+      "acceptTerms": true,
+      "id": 2
+    }
+  ],
+  "owner": [
+    {
+      "name": "pooja",
+      "mobileNo": "1478523690",
+      "email": "pooja1@gmail.com",
+      "pancard": "ASDFG1478A",
+      "gender": "female",
+      "city": "Delhi",
+      "password": "pooja123",
+      "confirmPassword": "pooja123",
+      "acceptTerms": true,
+      "id": 1
+    },
+    {
+      "name": "bhushan",
+      "mobileNo": "1122336554",
+      "email": "asd12@gmail.com",
+      "pancard": "AQWED4511S",
+      "gender": "male",
+      "city": "Mumbai",
+      "password": "bhushan123",
+      "confirmPassword": "bhushan123",
+      "acceptTerms": true,
+      "id": 2
+    },
+    {
+      "name": "priti",
+      "mobileNo": "7845123691",
+      "email": "priti12@gmail.com",
+      "pancard": "AQWSD1478A",
+      "gender": "female",
+      "city": "Pune",
+      "password": "priti123",
+      "confirmPassword": "priti123",
+      "acceptTerms": true,
+      "id": 3
+    },
+    {
+      "name": "priya",
+      "mobileNo": "1452369854",
+      "email": "priya123@gmail.com",
+      "pancard": "ASZXC1236A",
+      "gender": "female",
+      "city": "Pune",
+      "password": "priya123",
+      "confirmPassword": "priya123",
+      "acceptTerms": true,
+      "id": 4
+    },
+    {
+      "name": "jituraj",
+      "mobileNo": "7845123695",
+      "email": "jituraj145@gmail.com",
+      "pancard": "AQWES4851S",
+      "gender": "male",
+      "city": "Delhi",
+      "password": "jitu123",
+      "confirmPassword": "jitu123",
+      "acceptTerms": true,
+      "id": 5
+    }
+  ],
+  "user": [
+    {
+      "name": "bhushan",
+      "mobileNo": "4151235422",
+      "email": "bhushan@12mail.com",
+      "pancard": "ASWED4512A",
+      "gender": "male",
+      "city": "Pune",
+      "password": "bari",
+      "confirmPassword": "bari",
+      "acceptTerms": true,
+      "id": 1
+    }
+  ],
+  "hotelDetails": [
+    {
+      "ownerName": "jituraj",
+      "typeOfApplicant": "partnership",
+      "hotelName": "golden",
+      "hotelContact": "4521865412",
+      "HotelAddress": "maharana chauk",
+      "city": "Mumbai",
+      "starRating": "1",
+      "hotelAsso": "Yes",
+      "hotelAssoList": "IHHA",
+      "numberOfRooms": "45",
+      "noOfEmployes": "55",
+      "acceptTerms": true,
+      "id": 7
+    },
+    {
+      "ownerName": "pradip",
+      "typeOfApplicant": "company",
+      "hotelName": "tajhotel",
+      "hotelContact": "7851221515",
+      "HotelAddress": "tower",
+      "city": "Pune",
+      "starRating": "2",
+      "hotelAsso": "Yes",
+      "hotelAssoList": "FHRNI",
+      "numberOfRooms": "42",
+      "noOfEmployes": "44",
+      "acceptTerms": true,
+      "menu": true,
+      "id": 8
+    },
+    {
+      "ownerName": "priti",
+      "typeOfApplicant": "partnership",
+      "hotelName": "golden",
+      "hotelContact": "4545146645",
+      "HotelAddress": "pande chauk",
+      "city": "Pune",
+      "starRating": "1",
+      "hotelAsso": "Yes",
+      "hotelAssoList": "FHRNI",
+      "numberOfRooms": "45",
+      "noOfEmployes": "26",
+      "acceptTerms": true,
+      "id": 9
+    },
+    {
+      "ownerName": "snehal",
+      "typeOfApplicant": "partnership",
+      "hotelName": "swaraj",
+      "hotelContact": "4785123695",
+      "HotelAddress": "bhendi market",
+      "city": "Pune",
+      "starRating": "2",
+      "hotelAsso": "Yes",
+      "hotelAssoList": "FHRNI",
+      "numberOfRooms": "45",
+      "noOfEmployes": "20",
+      "acceptTerms": true,
+      "id": 10
+    },
+    {
+      "ownerName": "priti",
+      "typeOfApplicant": "company",
+      "hotelName": "jackpot",
+      "hotelContact": "1452369802",
+      "HotelAddress": "peth",
+      "city": "Mumbai",
+      "starRating": "1",
+      "hotelAsso": "Yes",
+      "hotelAssoList": "HAI",
+      "numberOfRooms": "12",
+      "noOfEmployes": "52",
+      "acceptTerms": true,
+      "id": 11
+    },
+    {
+      "ownerName": "bhushan",
+      "typeOfApplicant": "company",
+      "hotelName": "elite",
+      "hotelContact": "4785252545",
+      "HotelAddress": "railway station",
+      "city": "Delhi",
+      "starRating": "5",
+      "hotelAsso": "",
+      "hotelAssoList": "select",
+      "numberOfRooms": "50",
+      "noOfEmployes": "78",
+      "acceptTerms": true,
+      "id": 12
+    }
+  ],
+  "hotelBooking": [
+    {
+      "name": "suraj",
+      "mobileNo": "7894561230",
+      "email": "suraj14@gmail.com",
+      "checkInDate": "2023-04-25T18:30:00.000Z",
+      "checkOutDate": "2023-04-26T18:30:00.000Z",
+      "noOfGuest": "1-5",
+      "roomType": "1-5",
+      "amount": "500",
+      "id": 1
+    },
+    {
+      "name": "komal",
+      "mobileNo": "7845963214",
+      "email": "komal789@gmail.com",
+      "checkInDate": "2023-04-27T18:30:00.000Z",
+      "checkOutDate": "2023-04-28T18:30:00.000Z",
+      "noOfGuest": "1-5",
+      "roomType": "1-5",
+      "amount": "500",
+      "id": 2
+    },
+    {
+      "name": "jagruti",
+      "mobileNo": "7845963214",
+      "email": "jagu@gmail.com",
+      "checkInDate": "2023-04-26T18:30:00.000Z",
+      "checkOutDate": "2023-04-27T18:30:00.000Z",
+      "noOfGuest": "1-5",
+      "roomType": "1-5",
+      "amount": "500",
+      "id": 3
+    }
+  ]
+}

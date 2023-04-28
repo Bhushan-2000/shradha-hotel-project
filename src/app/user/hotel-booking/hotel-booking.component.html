@@ -1,0 +1,98 @@
+<body>
+    <button class="btn btn-dark" (click)="journeyOfBack()">Back</button>
+    <div class="main">
+        <form [formGroup]="bookingForm" autocomplete="off">
+
+            <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+                <div class="card auth">
+                    <div class="card-body auth-card">
+                        <div class="form-group">
+                            <mat-form-field>
+                                <mat-label for="name">Name:</mat-label>
+                                <input matInput type="text" class="form-control" placeholder="Name" formControlName="name">
+                                <mat-icon matSuffix> person_outline </mat-icon>
+                                <mat-error class="errorMsg" *ngIf="bookingForm.get('name')?. touched && bookingForm.get('name')?.errors?.['required']  "> This field is mandatory.</mat-error>
+                                <mat-error class="errorMsg" *ngIf="bookingForm.get('name')?.errors?.['minlength'] "> Minimum 3 Charactors required</mat-error>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="form-group">
+                            <mat-form-field>
+                                <mat-label for="phone">MobileNo:</mat-label>
+                                <input matInput type="text" formControlName="mobileNo" class="form-control" placeholder="Phone number">
+                                <mat-icon matSuffix> smartphone </mat-icon>
+                                <mat-error class="errorMsg" *ngIf="bookingForm.get('mobileNo')?. touched && bookingForm.get('mobileNo')?.errors?.['required']  "> This field is mandatory.</mat-error>
+                                <mat-error class="errorMsg" *ngIf="bookingForm.get('mobileNo')?.errors?.['maxlength'] "> Maximum 10 digits are Allow</mat-error>
+                                <mat-error class="errorMsg" *ngIf="bookingForm.get('mobileNo')?.errors?.['pattern'] "> please enter Valid Format </mat-error>
+                            </mat-form-field><br>
+                        </div>
+
+                        <div class="form-group">
+                            <mat-form-field>
+                                <mat-label for="email">Email Id:</mat-label>
+                                <mat-icon matSuffix> email </mat-icon>
+                                <input matInput type="email" formControlName="email" class="form-control" placeholder="eg.abc123@gmail.com">
+                                <mat-error class="errorMsg" *ngIf="bookingForm.get('email')?. touched && bookingForm.get('email')?.errors?.['required'] ">This field is mandatory.</mat-error>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="form-group">
+                            <mat-form-field>
+                                <mat-label>Check-in Date:</mat-label>
+                                <input matInput [matDatepicker]="checkinDatepicker" formControlName="checkInDate" class="form-control" placeholder="MM/DD/YYYY">
+                                <mat-datepicker-toggle matIconSuffix [for]="checkinDatepicker"></mat-datepicker-toggle>
+                                <mat-datepicker #checkinDatepicker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="form-group">
+                            <mat-form-field>
+                                <mat-label>Check-out Date:</mat-label>
+                                <input matInput [matDatepicker]="checkoutDatepicker" formControlName="checkOutDate" class="form-control" placeholder="MM/DD/YYYY">
+                                <mat-datepicker-toggle matIconSuffix [for]="checkoutDatepicker"></mat-datepicker-toggle>
+                                <mat-datepicker #checkoutDatepicker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="form-group">
+                            <mat-form-field>
+                                <mat-label for="number of guest">Number of Guest:</mat-label>
+                                <mat-select formControlName="noOfGuest">
+                                    <mat-option value="1-5">1-5</mat-option>
+                                    <mat-option value="6-10">6-10</mat-option>
+                                    <mat-option value="11-15">11-15</mat-option>
+                                    <mat-option value="more">more</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="form-group">
+                            <mat-form-field>
+                                <mat-label for="roomtype">Room Type:</mat-label>
+                                <mat-select formControlName="roomType">
+                                    <mat-option value="1-5">Standard</mat-option>
+                                    <mat-option value="6-10">Deluxe</mat-option>
+                                    <mat-option value="11-15">Suite</mat-option>
+
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="form-group">
+                            <mat-form-field>
+                                <mat-label for="amount">Amount:</mat-label>
+                                <input matInput type="text" formControlName="amount" class="form-control">
+                                <mat-error class="errorMsg" *ngIf="bookingForm.get('amount')?. touched && bookingForm.get('amount')?.errors?.['required']  "> This field is mandatory.</mat-error>
+                                <mat-error class="errorMsg" *ngIf="bookingForm.get('amount')?.errors?.['pattern'] "> please enter Valid Format </mat-error>
+                            </mat-form-field><br>
+                        </div>
+
+
+                        <input type="submit" value="Book Now" [disabled]="!bookingForm.valid" (click)="submit()">
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>

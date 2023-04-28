@@ -1,0 +1,84 @@
+.btn {
+    margin-left: 15px;
+    margin-top: 2px;
+}
+
+body {
+    background: linear-gradient(rgba(230, 158, 158, 0), rgba(108, 105, 105, 0.6));
+    height: 120%;
+}
+
+.table-container {
+    position: relative;
+    top: 60px;
+    margin-left: 180px;
+}
+
+.serach-bar {
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+
+table {
+    width: 800px;
+    box-shadow: -1px 12px 12px -6px rgba(0, 0, 0, 0.5);
+}
+
+table,
+td,
+th {
+
+    padding: 15px;
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+    text-align: center;
+    cursor: pointer;
+}
+
+td {
+    font-size: 15px;
+}
+
+th {
+    background-color: blue;
+    font-size: 18px;
+    color: white;
+}
+
+tr:nth-child(odd) {
+    background-color: lightblue;
+}
+
+tr:nth-child(odd):hover {
+    background-color: dodgerblue;
+    color: white;
+    transform: scale(1.0);
+    transition: transform 300ms ease-in;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(220, 220, 220);
+}
+
+tr:nth-child(even):hover {
+    background-color: rgb(213, 192, 192);
+    transform: scale(1.0);
+    transition: transform 300ms ease-in;
+}
+
+.btnBookNow {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    padding: auto;
+    color: #ededed;
+    background-color: rgb(82, 215, 72);
+}
+
+.btnBookNow:hover {
+    background-color: rgb(167, 31, 31);
+}

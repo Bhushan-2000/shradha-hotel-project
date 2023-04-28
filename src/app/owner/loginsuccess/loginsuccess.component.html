@@ -1,0 +1,37 @@
+<body>
+    <button mat-raised-button color="warn" class="btn" (click)="journeyOfBack()">Back</button>
+    <button mat-raised-button color="accent" class="btn" (click)="newHotelRegister()">Hotel Registration</button>
+    <button mat-raised-button color="primary" class="btn" (click)="viewMyHotelList()">View My Hotel List</button>
+    <button mat-raised-button color="warn" class="btn" (click)="viewAllHotelList()">View All Hotel List</button>
+
+    <div *ngIf="this.hotelDetailsByOwner.length !=0">
+        <div class="serach-bar">
+            <mat-form-field>
+                <mat-icon matPrefix>search</mat-icon>
+                <input matInput [(ngModel)]="inputBoxValue">
+            </mat-form-field>
+        </div>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th *ngFor="let heading of tableHeadings">{{heading}}</th>
+                </tr>
+                <tr *ngFor="let hotelsData of this.hotelDetailsByOwner | searchBox:inputBoxValue">
+                    <td>{{hotelsData.ownerName}}</td>
+                    <td>{{hotelsData.typeOfApplicant}}</td>
+                    <td>{{hotelsData.hotelName}}</td>
+                    <td>{{hotelsData.hotelContact}}</td>
+                    <td>{{hotelsData.HotelAddress}}</td>
+                    <td>{{hotelsData.city}}</td>
+                    <td>{{hotelsData.starRating}}</td>
+                    <td>{{hotelsData.numberOfRooms}}</td>
+                    <td>{{hotelsData.noOfEmployes}}</td>
+                    <td>{{hotelsData.hotelAssoList}}</td>
+                    <td>{{hotelsData.acceptTerms}}</td>
+                    <td> <i class="material-icons" (click)="delete(hotelsData.id)">delete</i></td>
+                    <td> <i class="material-icons" (click)="edit(hotelsData.id)">edit</i></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,73 @@
+.btn {
+    margin-left: 15px;
+    margin-top: 2px;
+}
+
+body {
+
+    background-image: url('/assets/images/img8.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.table-container {
+    position: relative;
+    top: 60px;
+    margin-left: 180px;
+}
+
+.serach-bar {
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+
+table {
+    width: 800px;
+    box-shadow: -1px 12px 12px -6px rgba(0, 0, 0, 0.5);
+}
+
+table,
+td,
+th {
+    padding: 15px;
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+    text-align: center;
+    cursor: pointer;
+}
+
+td {
+    font-size: 15px;
+}
+
+th {
+    background-color: blue;
+    font-size: 18px;
+    color: white;
+
+}
+
+tr:nth-child(odd) {
+    background-color: lightblue;
+}
+
+tr:nth-child(odd):hover {
+    background-color: dodgerblue;
+    color: white;
+    transform: scale(1.0);
+    transition: transform 300ms ease-in;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+tr:nth-child(even):hover {
+    background-color: rgb(213, 192, 192);
+    transform: scale(1.0);
+    transition: transform 300ms ease-in;
+}

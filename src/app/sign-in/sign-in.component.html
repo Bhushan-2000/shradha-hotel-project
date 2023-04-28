@@ -1,0 +1,47 @@
+<body>
+    <button class="btn" class="btn btn-dark" (click)="journeyOfBack()">Back</button>
+    <div class="main">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+                <div class="card auth">
+                    <div class="card-body auth-card">
+                        <div class="auth-avatar">
+                            <img src="/assets/images/iconuser.png" alt="user" class="user-image">
+                        </div><br>
+                        <form [formGroup]="signInForm" autocomplete="off">
+                            <div class="form-group">
+                                <mat-form-field>
+                                    <mat-label for="Name"> Name :</mat-label>
+                                    <input type="text" matInput formControlName="name" class="form-control" placeholder="Enter your name" required>
+                                    <mat-icon matSuffix> person_outline </mat-icon>
+                                    <mat-error class="errorMsg">
+                                        <span *ngIf="signInForm.get('name')?.touched && signInForm.get('name')?.errors?.['required']">This field is mandatory.</span>
+                                        <span *ngIf="signInForm.get('name')?.touched && signInForm.get('name')?.errors?.['minlength']">Minimum 5 Character Is Required</span>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div><br>
+                            <div class="form-group">
+                                <mat-form-field>
+                                    <mat-label for="password"> Password : </mat-label>
+                                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" class="form-control" placeholder="********" required>
+                                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                    <mat-error *ngIf="!passwordInput">Enter password</mat-error>
+                                    <mat-error class="errorMsg">
+                                        <span *ngIf="signInForm.get('password')?.touched && signInForm.get('password')?.errors?.['required']">This field is mandatory.</span>
+                                        <span *ngIf="signInForm.get('password')?.touched && signInForm.get('password')?.errors?.['pattern']">Pattern Not matched</span>
+                                    </mat-error>
+                                </mat-form-field><br>
+                            </div>
+                            <div class="text-center">
+                                <input type="submit" class="btn btn-my" value="Login" [disabled]="!signInForm.valid" (click)="submit()">
+                            </div><br>
+                        </form>
+                        <div class="text-center sign-up">
+                            Don`t have an account ? <a routerLink="/signUp">Sign Up</a> here.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,114 @@
+<body>
+  <button class="btn btn-dark" (click)="journeyOfBack()">Back</button>
+  <div class="row">
+    <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+      <div class="card auth">
+        <div class="card-body auth-card">
+          <div class="auth-avatar">
+            <img src="assets/images/6521996.png" alt="user" class="user-image">
+          </div>
+          <form [formGroup]="signUpForm" autocomplete="off">
+            <div class="form-group">
+              <mat-form-field>
+                <mat-label for="name">Name:</mat-label>
+                <input matInput type="text" class="form-control" placeholder="Name" formControlName="name">
+                <mat-icon matSuffix> person_outline </mat-icon>
+                <mat-error class="errorMsg" *ngIf="signUpForm.get('name')?. touched && signUpForm.get('name')?.errors?.['required']  "> This field is mandatory.</mat-error>
+                <mat-error class="errorMsg" *ngIf="signUpForm.get('name')?.errors?.['minlength'] "> Minimum 5 Charactors required</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="form-group">
+              <mat-form-field>
+                <mat-label for="phone">MobileNo:</mat-label>
+                <input matInput type="text" formControlName="mobileNo" class="form-control" placeholder="Phone number">
+                <mat-icon matSuffix> smartphone </mat-icon>
+                <mat-error class="errorMsg" *ngIf="signUpForm.get('mobileNo')?. touched && signUpForm.get('mobileNo')?.errors?.['required']  "> This field is mandatory.</mat-error>
+                <mat-error class="errorMsg" *ngIf="signUpForm.get('mobileNo')?.errors?.['maxlength'] "> Maximum 10 digits are Allow</mat-error>
+                <mat-error class="errorMsg" *ngIf="signUpForm.get('mobileNo')?.errors?.['pattern'] "> please enter Valid Format </mat-error>
+              </mat-form-field><br>
+            </div>
+
+            <div class="form-group">
+              <mat-form-field>
+                <mat-label for="email">Email Id:</mat-label>
+                <mat-icon matSuffix> email </mat-icon>
+                <input matInput type="email" formControlName="email" class="form-control" placeholder="eg.abc123@gmail.com">
+                <mat-error class="errorMsg" *ngIf="signUpForm.get('email')?. touched && signUpForm.get('email')?.errors?.['required'] ">This field is mandatory.</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div style="margin-left: 12px;">
+              <label for="gender">Gender:</label>
+              <mat-radio-group formControlName="gender">
+                <mat-radio-button value="male"> <span class="login">Male</span></mat-radio-button>
+                <mat-radio-button value="female"><span class="login">Female</span></mat-radio-button>
+                <mat-radio-button value="others"><span class="login">Others</span></mat-radio-button>
+              </mat-radio-group>
+            </div>
+
+            <div class="form-group">
+              <mat-form-field>
+                <mat-label for="city">City:</mat-label>
+                <mat-select formControlName="city">
+                  <mat-option value="Pune">Pune</mat-option>
+                  <mat-option value="Mumbai">Mumbai</mat-option>
+                  <mat-option value="Delhi">Delhi</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <div class="form-group">
+              <mat-form-field>
+                <mat-label for="pancard">Pancard No:</mat-label>
+                <input matInput type="pancard" formControlName="pancard" class="form-control" placeholder=" eg.ABCTY1234D">
+                <mat-hint class="errorMsg" *ngIf="signUpForm.get('pancard')?. touched && signUpForm.get('pancard')?.errors?.['required']"> This field is mandatory.</mat-hint>
+                <mat-hint class="errorMsg" *ngIf="signUpForm.get('pancard')?.errors?.['pattern'] "> please enter Valid Format </mat-hint>
+              </mat-form-field>
+            </div>
+
+            <mat-form-field>
+              <mat-label>Password:</mat-label>
+              <input matInput [type]="showPassword ? 'text' : 'password'" formControlName="password" (keyup)="passwordValidation($event)" class="form-control" placeholder="********">
+              <mat-icon matSuffix (click)="visiblity()">{{showPassword ? 'visibility' : 'visibility_off'}}</mat-icon>
+              <mat-hint class="errorMsg" *ngIf="passwordMatch "> Password Not Match</mat-hint>
+              <mat-hint class="errorMsg" *ngIf="signUpForm.get('password')?. touched && signUpForm.get('password')?.errors?.['required']&& !passwordMatch "> This field is mandatory.</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Confirm Password:</mat-label>
+              <input matInput [type]="showConfirmPassword ? 'text' : 'password'" formControlName="confirmPassword" (keyup)="confirmpasswordValidation($event)">
+              <mat-icon matSuffix (click)="confirmVisibility()">{{showConfirmPassword ? 'visibility' : 'visibility_off'}}</mat-icon>
+              <mat-hint class="errorMsg" *ngIf="passwordMatch"> Password Not Match</mat-hint>
+              <mat-hint class="errorMsg" *ngIf="signUpForm.get('confirmPassword')?. touched && signUpForm.get('confirmPassword')?.errors?.['required']&& !passwordMatch "> This field is mandatory.</mat-hint>
+            </mat-form-field>
+
+            <div class="login">
+              <mat-checkbox formControlName="acceptTerms"></mat-checkbox>Accept Terms And Conditions <br>
+            </div>
+
+            <div class="text-center">
+              <input type="submit" class="btn btn-my" value="Sign Up" [disabled]="!signUpForm.valid" (click)="submit()">
+            </div>
+
+            <div class="text-center login">
+              Already have an account ? <a routerLink="/signIn">Login</a> here.
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>

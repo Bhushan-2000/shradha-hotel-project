@@ -1,0 +1,37 @@
+<body>
+  <button mat-raised-button color="warn" class="btn" (click)="journeyOfBack()">Back</button><br>
+
+  <div class="serach-bar">
+    <mat-form-field>
+      <mat-icon matPrefix>search</mat-icon>
+      <input matInput [(ngModel)]="inputBoxValue">
+    </mat-form-field>
+  </div>
+  <div class="table-container">
+
+    <table>
+      <tr>
+        <th *ngFor="let heading of tableHeadings">{{heading}}</th>
+        <th *ngIf="getEndPoint=='admin'">Delete</th>
+        <th *ngIf="getEndPoint!=='admin'">Book Now</th>
+      </tr>
+      <tr *ngFor="let hotelsData of hotelDetails | searchBox:inputBoxValue">
+        <td>{{hotelsData.ownerName}}</td>
+        <td>{{hotelsData.typeOfApplicant}}</td>
+        <td>{{hotelsData.hotelName}}</td>
+        <td>{{hotelsData.hotelContact}}</td>
+        <td>{{hotelsData.HotelAddress}}</td>
+        <td>{{hotelsData.city}}</td>
+        <td>{{hotelsData.starRating}}</td>
+        <td>{{hotelsData.numberOfRooms}}</td>
+        <td>{{hotelsData.noOfEmployes}}</td>
+        <td>{{hotelsData.hotelAssoList}}</td>
+        <td>{{hotelsData.acceptTerms}}</td>
+        <td *ngIf="getEndPoint=='admin'"> <i class="material-icons" (click)="delete(hotelsData.id)">delete</i></td>
+        <button class="btnBookNow" *ngIf="getEndPoint!=='admin'" (click)="bookNow()">Book Now</button>
+        <!-- <button class="btnBookNow" *ngIf="getEndPoint == 'owner' || 'user'" (click)="bookNow()">Book Now</button> -->
+      </tr>
+    </table>
+  </div>
+
+</body>

@@ -1,0 +1,34 @@
+body {
+    background-image: url('/assets/images/owner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.btn {
+    margin-left: 15px;
+    margin-top: 2px;
+}
+
+.hotelAnimation {
+    color: rgb(81, 203, 228);
+    font-size: 60px;
+    position: relative;
+    margin-top: 520px;
+    text-shadow: 4px 4px rgb(209, 34, 182);
+    animation-name: mymove;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes mymove {
+    from {
+        left: 100%;
+
+    }
+
+    to {
+        left: -90%;
+    }
+}
